@@ -1,2 +1,2 @@
 # EE3900
-Course offered by IIT Hyderabad under Prof. G V V Sharma
+Course EE3900 : Linear Systems and Signal Processing offered by IIT Hyderabad during the period Aug - Nov 2022
