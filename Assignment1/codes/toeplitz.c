@@ -49,6 +49,9 @@ int main()
     double x[] = {1, 2, 3, 4, 2, 1}; 
     double y[n]; 
 
+    FILE* fp; 
+    fp = fopen("input.txt", "w"); 
+
     int k = n; 
 
     y[0] = x[0]; 
@@ -70,19 +73,14 @@ int main()
         }
     }
 
+    // passing y to the python file 
+
+    for(int i = 0; i < n; i++)
+    {
+        fprintf(fp, "%lf ", y[i]);
+    }
+
     double** result = toeplitz(x, y); 
-
-    // to print the Toeplitz matrix 
-
-    // for(int i = 0; i < 25; i++)
-    // {
-    //     for(int j = 0; j < 20; j++)
-    //     {
-    //         printf("%lf ", result[i][j]); 
-    //     }
-
-    //     printf("\n"); 
-    // }
 
     double ans[(n + m - 1)]; 
 
@@ -95,8 +93,22 @@ int main()
 
     for(int i = 0; i < n; i++)
     {
-        printf("%lf ", y[i]); 
+        printf("%lf, ", y[i]); 
     }
+
+    fclose(fp); 
+
+    // to print the Toeplitz matrix 
+
+    // for(int i = 0; i < 25; i++)
+    // {
+    //     for(int j = 0; j < 20; j++)
+    //     {
+    //         printf("%lf ", result[i][j]); 
+    //     }
+
+    //     printf("\n"); 
+    // }
 
     // to print the coefficient matrix for the polynomial
 
