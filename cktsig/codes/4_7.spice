@@ -1,0 +1,16 @@
+* Plotting V_{C_0}(t) again 
+V2 2 0 2
+R1 1 0 1
+R2 1 2 2
+C0 1 0 1u ic=0
+.tran 100n 5u uic
+
+.control
+run
+wrdata 4_7_output.dat V(1)
+.endc
+
+.end
+
+
+
